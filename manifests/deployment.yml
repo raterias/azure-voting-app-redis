@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "shekhardockerk8scluster"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "shekhardockerk8scluster"
+    spec:
+      containers:
+        - name: "shekhardockerk8scluster"
+          image: "raterias.azurecr.io/shekhardockerk8scluster"
+          ports:
+          - containerPort: 80
